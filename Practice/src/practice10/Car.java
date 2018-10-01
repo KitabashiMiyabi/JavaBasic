@@ -2,8 +2,8 @@ package practice10;
 
 public class Car {
 
-
-
+	
+	
 	int serialNo;
 	String color;
 	int gasoline;
