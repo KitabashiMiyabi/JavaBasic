@@ -6,6 +6,9 @@
  */
 package practice13.ptra13;
 
+import practice13.common.Hero;
+import practice13.common.Slime;
+
 public class PTra13_04 {
 
 	/*
@@ -15,14 +18,64 @@ public class PTra13_04 {
 	public static void main(String[] args) {
 
 		// ★ HeroインスタンスとSlimeインスタンスを作成し、それぞれの名前に"勇者", "スライム"を設定してください
+		Hero hero = new Hero();
+		Slime slime = new Slime();
 
+		hero.setName("勇者");
+		slime.setName("スライム");
 
 		/*
-		 * ★ HeroとSlimeを、どちらかが体力０になるまで戦わせます
+		 * ★ HeroとSlimeを、どちらかが体力０になるまで戦わせま
+		 * す
 		 *
 		 * 	●Heroの攻撃 -> ダメージ判定 -> Slimeの攻撃 -> ダメージ判定
 		 * 上記を繰り返し行います
 		 */
+
+
+		while(true) {
+
+			// hattackは10
+			int hattack = hero.attack();
+			boolean sdead = slime.damage(hattack);
+
+			if (sdead) {
+				System.out.println(slime.getName()+"のHPが０になった。");
+				System.out.println(hero.getName()+"は"+slime.getName() +"との戦闘に勝利した");
+				break;
+			}
+
+			int sattack = slime.attack();
+			boolean hdead = hero.damage(sattack);
+
+			if (hdead) {
+				System.out.println(hero.getName()+"のHPが０になった。");
+				System.out.println(slime.getName()+"は"+hero.getName() +"との戦闘に勝利した");
+				break;
+			}
+
+
+
+
+
+//			if(z.hp>0 ) {
+//				z.attack();
+//				x.damage(1);
+//			}else{
+//				System.out.println(z.getName()+"のHPが０になった。");
+//				System.out.println(z.getName()+"は"+x.getName() +"との戦闘に勝利した");
+//				break;
+//			}
+//			if(x.hp>0) {
+//				x.attack();
+//				z.damage(1);
+//			}else {
+//				System.out.println(x.getName()+"のHPが０になった。");
+//				System.out.println(x.getName()+"は"+z.getName()+ "との戦闘に勝利した");
+//				break;
+//			}
+
+		}
 
 
 		// ★ 勝利した方の出力を行ってください。「○○は■■との戦闘に勝利した」
