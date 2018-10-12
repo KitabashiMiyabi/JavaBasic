@@ -6,6 +6,10 @@
  */
 package practice13.ptra13;
 
+import practice13.common.Item;
+import practice13.common.Slime;
+import practice13.common.SuperHero;
+
 public class PTra13_07 {
 
 	/*
@@ -16,12 +20,15 @@ public class PTra13_07 {
 
 		// ★ SuperHeroインスタンスとSlimeインスタンスを作成し、それぞれの名前に"勇者（装備あり）", "スライム"を設定してください
 
+		SuperHero superHero = new SuperHero();
+		superHero.setName("スーパーヒーロー");
+
 
 		// ★ Itemクラスのインスタンスを作成し、("こんぼう", 4）をコンストラクタの引数にしてください
-
+		Item item = new Item("こんぼう", 4);
 
 		// ★ 作成したItemインスタンスをSuperHeroに持たせてください
-
+		superHero.setEquipment(item);
 
 		/*
 		 * ★ SuperHeroとSlimeを、どちらかが体力０になるまで戦わせます
@@ -32,6 +39,31 @@ public class PTra13_07 {
 
 
 		// ★ 勝利した方の出力を行ってください。「○○は■■との戦闘に勝利した」
+
+		Slime slime = new Slime();
+		slime.setName("スライム");
+
+		int suattack = superHero.attack();
+		int slattack = slime.attack();
+
+
+		while(true) {
+
+			boolean sdead = slime.damage(suattack);
+
+			if (sdead) {
+				System.out.println(superHero.getName()+"は"+slime.getName() +"との戦闘に勝利した");
+				break;
+			}
+
+			boolean hdead = superHero.damage(slattack);
+
+			if (hdead) {
+				System.out.println(slime.getName()+"は"+superHero.getName() +"との戦闘に勝利した");
+				break;
+			}
+
+		}
 
 	}
 }
