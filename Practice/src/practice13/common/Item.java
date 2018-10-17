@@ -4,6 +4,9 @@ public class Item {
 
 
 	private String name;
+	private int additionalDamage;
+	
+	
 	public String getName() {
 		return this.name;
 	}
@@ -11,7 +14,7 @@ public class Item {
 		this.name = name;
 	}
 
-	private int additionalDamage;
+	
 	public int getAdditionalDamage() {
 		return this.additionalDamage;
 	}
@@ -22,7 +25,7 @@ public class Item {
 
 
 
-	public Item(String name,int additionalDamage) {
+	public Item(String name,int additionalDamage) {  //コンストラクタ
         this.name = name;
         this.additionalDamage = additionalDamage;
     }
