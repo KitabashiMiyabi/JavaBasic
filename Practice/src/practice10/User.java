@@ -21,4 +21,8 @@ public class User {
 	String mail;
 	String password;
 
+	public String toString() {
+		return userId + "," + userNm+ ","+ mail+","+ password;
+	}
+
 }
