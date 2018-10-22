@@ -10,7 +10,7 @@ public class PTra01_03 {
 	public static void main(String[] args) {
 
 		// ★ int型の変数 i を宣言してください
-		int i ;
+		int i;
 
 		// ★ 変数 i に 10 を代入してください
 		i = 10;

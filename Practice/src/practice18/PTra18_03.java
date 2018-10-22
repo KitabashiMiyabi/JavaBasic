@@ -6,6 +6,13 @@
  */
 package practice18;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import practice18.entity.Player;
+
 public class PTra18_03 {
 
 	/*
@@ -19,13 +26,48 @@ public class PTra18_03 {
 		 * ★ file/BestElevenCandidate.csvの内容を取得し、１行毎にPlayerインスタンスに情報を格納してください
 		 * ★ ArrayListを作成して、Playerインスタンスを格納してください
 		 */
+		ArrayList<Player> array = new ArrayList<>();
+		try (Scanner scanner = new Scanner(new File("file/BestElevenCandidate.csv"))) {
+			while (scanner.hasNext()) {
+				String line = scanner.nextLine();
 
+				// ★lineをsplitして配列型にしてください
+
+				String[] list = line.split(",");
+
+				// Plaerインスタンスを作ってください
+
+				Player player = new Player();
+
+				// 配列の中身をインスタンスのフィールドにセット
+				player.setPosition(list[0]);
+				player.setName(list[1]);
+				player.setCountry(list[2]);
+				player.setTeam(list[3]);
+				// インスタンスをarrayに追加してください
+
+				array.add(player);
+
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("ファイルが見つかりません");
+		}
 
 		// ★ ①のArrayListの中から"レアル・マドリード", "バルセロナ"の選手を除外してください
 
+		// チームの情報だけ
+		for (int i = array.size()-1; i >= 0; i--) {
+				String team = array.get(i).getTeam();
+			if (team.equals("レアル・マドリード") || team.equals("バルセロナ")) {
+				array.remove(i);
+			}
+
+		}
 
 		// ★ 削除後のArrayListの中身を全件出力してください
-
+		for (Player player : array) {
+			System.out.println(player);
+		}
 
 	}
 }

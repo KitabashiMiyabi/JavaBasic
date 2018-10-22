@@ -14,20 +14,21 @@ public class PTra01_07 {
 		// ★ それぞれの型変数に、値を代入してください
 		// ※ 値は、好きな数字を入力してください
 
-		boolean isGetUp;
-        isGetUp = false;
-        System.out.println(isGetUp);
-		short s = 10;
+		boolean bo = false;
+        System.out.println(bo);
+        byte by = 111;
+        System.out.println(by);
+        short s = 1000;
 		System.out.println(s);
 		char c = 'R';
         System.out.println(c);
-		int i = 10;
+		int i = 10000;
 	    System.out.println(i);
 		long l = 100000000L;
 	    System.out.println(l);
-		float f = 3.14F ;
+		float f = 3.14444444F;
         System.out.println(f);
-		double d = 3.5 ;
+		double d = 3.555555555555;
         System.out.println(d);
 
 

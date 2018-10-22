@@ -47,23 +47,32 @@ public class PTra18_02 {
 
                 // ★lineをsplitして配列型にしてください
 
-                String[] list= line.split(",");
+                String[] list = line.split(",");
 
                 // Plaerインスタンスを作ってください
+
                 Player player = new Player();
+
                 // 配列の中身をインスタンスのフィールドにセット
-                player
+                player.setPosition(list[0]);
+                player.setName(list[1]);
+                player.setCountry(list[2]);
+                player.setTeam(list[3]);
                 // インスタンスをarrayに追加してください
+
                 array.add(player);
 
             }
         } catch (FileNotFoundException e) {
             System.out.println("ファイルが見つかりません");
-        }Fs
+        }
 
 
 		// ★ ArrayListに格納されているインスタンス全てのtoStringメソッドを実行し、出力してください
 		// ※ できれば拡張for文を使いましょう
+        for( Player a :array) {
+        	System.out.println(a);
+        }
 
 	}
 }
