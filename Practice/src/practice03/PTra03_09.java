@@ -50,10 +50,8 @@ public class PTra03_09 {
 			break;
 		}
 
-//		if (!( 0 <= num && num <= 6 )) {
-//			System.out.println("0～6の整数を入力してください");
-//
-//		} else if ( num == 0) {
+//			
+//	    if ( num == 0) {
 //			System.out.println("０：日曜");
 //		} else if ( num == 1) {
 //			System.out.println("１：月曜");
@@ -67,6 +65,8 @@ public class PTra03_09 {
 //			System.out.println("５：金曜");
 //		} else if ( num == 6) {
 //			System.out.println("６：土曜");
+//		}else{
+//		System.out.println("0～6の整数を入力してください");
 //		}
 	}
 }

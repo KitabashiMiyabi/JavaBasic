@@ -36,7 +36,7 @@ public class PTra04_04 {
 			dice = dice + 1;
 
 			// ★ サイコロを振って出た目を、変数progressに加算してください
-			progress = progress + dice ;
+			progress +=  dice ;
 			
 			
 

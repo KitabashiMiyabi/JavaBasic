@@ -29,17 +29,27 @@ public class PTra05_02 {
 		 *
 		 *  ※##は変数inputの中身
 		 */
-		
-		
-		switch ( input % 2) {   //式なら( )に入れられる ! とか == は入れられない
-			case 0 : 
+
+
+		switch ( input % 2) {   //余りを出す％なので、
+			case 0:             //余りが０なら
 				System.out.println(input + "は偶数です");
 				break;
-				
-			default :
+			default:            //それ以外なら
 				System.out.println(input + "は奇数です");
-				
+			
+			//case 1:              余りが１なら
+			//	System.out.println(input + "は奇数です");
+			//	break;
 		}
 
 	}
 }
+		//switch (input % 2) {
+		//case 0:
+		//	System.out.println(input + "は偶数です");
+		//	break;
+		//case 1:
+		//	System.out.println(input + "は奇数です");
+		//	break;
+		//}

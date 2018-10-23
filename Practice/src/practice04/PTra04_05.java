@@ -44,43 +44,44 @@ public class PTra04_05 {
 			 *
 			 * ※ プログラムは何行書いても良いです
 			 */
-			if (cpuHand == 0) {
+			if ( cpuHand == 0) {
 				System.out.println("グー！");
-				if(myHand == 0) {
-					//aiko
-				}else if(myHand ==1) {
-					//make
-				}else {
-					//kati
+				if( myHand == 1) {
+					System.out.println("あなた負け！もう一勝負！");
+				}else if(myHand == 0) {
+						System.out.println("あいこ！もう一回！");
+				}else if(myHand == 2) {
+					System.out.println("あなたの勝ち！！");
 					winFlg = true;
+				}else{
+					System.out.println("グーかチョキかパーを出してね！");
 				}
-
-
-			} else if (cpuHand == 1) {
-				System.out.println("チョキ！！");
-				if(myHand == 0) {
-					//kati
-				}else if(myHand ==1) {
-					//aiko
-				}else {
-					//make
+			} else if ( cpuHand == 1) {
+				System.out.println("チョキ！");
+				if( myHand == 0) {
+					System.out.println("あなたの勝ち！！");
 					winFlg = true;
+				}else if( myHand ==1) {
+					System.out.println("あいこ！もう一回！");
+				}else if( myHand == 2) {
+					System.out.println("あなたの負け！もう一勝負！");
+				}else{
+					System.out.println("グーかチョキかパーを出してね！");
 				}
-
-
 			} else {
-				System.out.println("パー！！");
+				System.out.println("パー！");
 				if(myHand == 0) {
-					//make
-				}else if(myHand ==1) {
-					//kati
-				}else {
-					//aiko
+					System.out.println("あなたの負け！");
+				}else if( myHand ==1) {
+					System.out.println("あなたの勝ち！！");
 					winFlg = true;
+				}else if( myHand == 2) {
+					System.out.println("あいこ！もう一回！");
+				}else {
+					System.out.println("グーかチョキかパーを出してね！");
 				}
-
 			}
-			
+
 
 		}
 	}

@@ -18,22 +18,21 @@ public class PTra04_02 {
 			// ★ 変数indexの値が3でも5でも割り切れる数の場合は、「FizzBuzz」と出力
 			if ( index % 3 == 0 && index % 5 == 0 ) {
 				System.out.println("FizzBuzz");
-			}
+
 			// ★ 変数indexの値が3で割り切れ、5で割り切れない場合は、「Fizz」と出力
-			if ( (index % 3 == 0) && (!( index % 5 == 0)) ) {
+			}else if ( index % 3 == 0 ){ //&& (!( index % 5 == 0)) ) { 下で同じ事してるからいらない
 				System.out.println("Fizz");
-			}
+
 			// ★ 変数indexの値が5で割り切れ、3で割り切れない場合は、「Buzz」と出力
-			if ( (index % 5 == 0) && (!(index % 3 ==0)) ) {
+			}else if ( index % 5 == 0) { //&& (!(index % 3 ==0)) ) {
 				System.out.println("Buzz");
-			}
 			// ★ 変数indexの値が3でも5でも割り切れない場合は、変数indexの値を出力
-			if ( (!(index % 3 == 0)) && (!(index % 5 ==0)) ) {
+			}else {
 				System.out.println(index);
 			}
 
 			// ★ 変数indexに1を加算した数を、変数indexに代入する
-			index = ++index ;
+			index++;
 
 		}
 
