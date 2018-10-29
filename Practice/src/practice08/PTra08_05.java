@@ -33,14 +33,16 @@ public class PTra08_05 {
 
 		// ★ 変数choiceの中が、1であれば四角形の面積を算出するメソッドを、2であれば三角形の面積を算出するメソッドを呼び出してください
 
-		
-		
+
+		double a = 0;
 		if(choice == 1) {
-			double a = quadrangle (width,height);
+			a = quadrangle (width,height);
 			System.out.println("四角形の面積: "+ a );
-		} else {
-			double a = triangle (width,height);
+		} else if(choice == 2) {
+			a = triangle (width,height);
 			System.out.println("三角形の面積:"+ a );
+		} else {
+			System.out.println("正しい値を入力してください");
 		}
 	}
 	/*
@@ -53,9 +55,7 @@ public class PTra08_05 {
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、四角形の面積を返すメソッド
 	 */
 	public static double quadrangle(double width, double height) {
-		double a = width * height;
-		return a ;
-		
+		return width * height;
 	}
 
 	/*
@@ -68,9 +68,8 @@ public class PTra08_05 {
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、三角形の面積を返すメソッド
 	 */
 		public static double triangle(double width, double height) {
-			double a = width * height / 2;
-			return a ;
+			return width * height / 2;
 		}
-			
+
 
 }

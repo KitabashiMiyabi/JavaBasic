@@ -13,16 +13,18 @@ package practice12.common;
  */
 public class Student {
 	/** 受講生ID */
-	private int studentId;
-	public int getStudentId() {
+	private int studentId;//フィールド
+	
+	public int getStudentId() {//getterメソッド
 		return this.studentId;
 	}
-	public void setStudentId(int studentId) {
+	public void setStudentId(int studentId) {//setterメソッド
 		this.studentId = studentId;
 	}
 
 	/** 受講生氏名 */
 	private String studentName;
+	
 	public String getStudentName() {
 		return this.studentName;
 	}
@@ -32,6 +34,7 @@ public class Student {
 
 	/** 会社名 */
 	private String companyName;
+	
 	public String getCompanyName() {
 		return this.companyName;
 	}
@@ -41,6 +44,7 @@ public class Student {
 
 	/** 教室名 */
 	private String className;
+	
 	public String getClassName() {
 		return this.className;
 	}
@@ -50,6 +54,7 @@ public class Student {
 
 	/** メールアドレス */
 	private String mail;
+	
 	public String getMail() {
 		return this.mail;
 	}
@@ -59,6 +64,7 @@ public class Student {
 
 	/** パスワード */
 	private String password;
+	
 	public String getPassword() {
 		return this.password;
 	}

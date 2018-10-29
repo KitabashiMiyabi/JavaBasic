@@ -31,10 +31,7 @@ public class PTra07_05 {
 		
 		for(int i = 0; i < array.length; i++) {
 		
-		 
-			
-			int random = new java.util.Random().nextInt(1000);
-			array [i]  = random;
+			array [i] = new java.util.Random().nextInt(100001);//()の中身は上限
 			
 			System.out.println(array[i]);
 		}

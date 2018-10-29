@@ -13,7 +13,7 @@ public class PTra08_04 {
 
 		// ★ メソッドconvertMessageを（変数message）で呼び出してください
 		
-		convertMessage(message);
+		convertMessage(message);//"Hello, world!";を送った
 		
 	}
 
@@ -26,9 +26,9 @@ public class PTra08_04 {
 	 *
 	 * 引数で渡された値の前後に 「 」 を付与して出力するメソッド（"「"と引数と"」"の連結）
 	 */
-	public static void convertMessage (String str) {
+	public static void convertMessage (String str) {//messageが入った変数str
 
-		System.out.println("「" + str +  "」");
+		System.out.println("「" + str +  "」");//そのまま実行すればいいのでreturn無しでok
 		
 	}
 }

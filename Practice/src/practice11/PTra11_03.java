@@ -24,10 +24,11 @@ public class PTra11_03 {
 	public static void main(String[] args) {
 
 		// ★ sumメソッドを呼び出してください
-		PTra11_03 a = new PTra11_03();//staticの付いてるメソッドでstaticの付いていないメソッドの呼び出しは出来ない。
-		a.sum(5, 10);                 //だから先ずstaticが付いていないPTra11_03のインスタンスを作り、
-	}                                 //そこでstaticの付いていないsumメソッドを呼び出さなくてはならない。
-
+		new PTra11_03().sum(5, 10);
+		//staticの付いてるクラスでstaticの付いていないメソッドの呼び出しは出来ない。
+	    //だから先ずstaticが付いていないPTra11_03のインスタンスを作り、
+	   //そこでstaticの付いていないsumメソッドを呼び出さなくてはならない。
+	}
 
 	public void sum(int x, int y) {
 		System.out.println("sumメソッドを呼び出しました。" + x + "＋" + y + "＝" + (x + y));

@@ -14,8 +14,8 @@ public class PTra07_03 {
 		
 	
 		// ★ 配列keywordに格納されている値を後ろから順番に全て表示してください
-		for(int i = keywod.length-1; i >= 0; i--) {
-			System.out.print(keywod[i]+" ");
+		for(int i = keywod.length - 1; 0 <= i; i--) {
+			System.out.println(keywod[i]);
 		}
-	}
+	
 }

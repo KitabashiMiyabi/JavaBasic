@@ -1,4 +1,7 @@
 package practice10;
+
+import java.util.Scanner;
+
 /*
  * PTra10_03.java
  *   作成	LIKEIT	2017
@@ -24,7 +27,7 @@ public class PTra10_03 {
 		// ★ java.util.Scannerクラスをインスタンス化し、変数scannerに代入してください
         System.out.println("ユーザID（数字）、 ユーザ名、メールアドレス、パスワードをカンマ区切りで入力してください");
 
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);//インポート
 
 		// ★ 入力された値を、String型の変数lineに格納してください
 		 String line = scanner.nextLine();
@@ -40,6 +43,9 @@ public class PTra10_03 {
 		 us.password = a[3];
 
 		// ★ 変数usに格納されているインスタンスの、フィールドuserId, userNm, mail, passwordを出力してください
-		 System.out.println(us.userId + "," + us.userNm+ ","+ us.mail+","+ us.password);
+		 System.out.println(us.userId);
+			System.out.println(us.userNm);
+			System.out.println(us.mail);
+			System.out.println(us.password);
 	}
 }

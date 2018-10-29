@@ -51,11 +51,11 @@ public class PTra10_05 {
 		 * 目的地までn時間かかりました。残りのガソリンは、xリットルです。
 		 */
 		int sum = 0;
-		int n = 0;
+		int n = 0;//カウント用
 		while(true) {
 
-			int run = car.run();
-			n++;
+			int run = car.run(); //メソッドを変数に
+			n++;  //カウント
 
 			if(run == -1) {
 				System.out.println("目的地に到達できませんでした");

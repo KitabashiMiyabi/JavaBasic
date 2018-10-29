@@ -6,6 +6,8 @@ package practice10;
  * Copyright(c) Rhizome Inc. All Rights Reserved.
  */
 
+import java.util.Scanner;
+
 public class PTra10_06 {
 
 	/*
@@ -15,52 +17,57 @@ public class PTra10_06 {
 	public static void main(String[] args) {
 
 		/*
-		 * carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
-		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
+		 * Carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
+		 * 各Carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
 		 */
-		 
-		Car car = new Car();
-		Car car2 = new Car();
-		Car car3 = new Car();
 
-		Car[] cars = {car,car2,car3};
-		
-		car.color= "Red";
-		car2.color = "Blue";
-		car3.color = "yellow";
-		
-		car.gasoline =50;
-		car2.gasoline =50;
-		car3.gasoline =30;
-		
-		final int distance = 300;
-		
-		
-		for(int i = 0; i < cars.length;i++) {
-			
-		
-		int sum = 0;
-		int n = 0;
-		
-		while(true) {
-			
-			int run = cars[i].run();
-			n++;
+		Scanner scanner = new Scanner(System.in);//入力メソッド１
+		Car[] cars = new Car[3];//先ず配列3つ作る
 
-			if(run == -1) {
-				System.out.println(cars[i].color+"色の車は目的地に到達できませんでした");
-				break;
-			}
+		for (int i = 0; i < cars.length; i++) {//配列の長さ
+			System.out.println("------------------------------------");
+			System.out.println((i + 1) + "台目");
+			cars[i] = new Car();//配列の中にインスタンスを入れる
 
+			System.out.println("シリアル№、車体カラー、ガソリン量をカンマ区切りで入力してください");
+			String line = scanner.nextLine();//入力メソッド２
 
-			sum += run;
+			String[] date = line.split(",");//区切られた入力した文字をdate配列に
 
-			if(sum >distance ) {
-				System.out.println(cars[i].color+"色の車は目的地にまで"+ n +"時間かかりました。残りのガソリンは、"+cars[i].gasoline+"リットルです。");
-				break;
+			cars[i].serialNo = Integer.parseInt(date[0]);//シリアルナンバー
+			cars[i].color = date[1];                      //色
+			cars[i].gasoline = Integer.parseInt(date[2]);//ガソリン
+		}
+
+			//それぞれの車を走らせる
+		final int distance = 300;//変わらなくていいものはfinal
+
+		int[] count = new int[cars.length];
+
+		for (int i = 0; i < cars.length; i++) {
+			int move = 0;
+			while (distance - move > 0) {
+				int ret = cars[i].run();
+				if (ret == -1) {
+					count[i] = -1;
+					break;
+				}
+
+				move += ret;
+				count[i]++;
 			}
 		}
+
+		// 出力
+		for (int i = 0; i < count.length; i++) {
+			if (count[i] == -1) {
+				System.out.println((i + 1) + "台目は目的地に到達できませんでした");
+			} else {
+				System.out.println((i + 1) + "台目の車が掛かった時間：" + count[i] + "時間");
+			}
+
 		}
-		
+
+
 	}
 }
