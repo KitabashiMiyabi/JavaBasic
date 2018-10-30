@@ -8,20 +8,23 @@ public class SuperHero extends Hero {
 
 	private Item equipment;
 
-
-
-	public int attack() {
-		return super.attack()+equipment.getAdditionalDamage();
-
-	}
-
-
-
 	public Item getEquipment() {
 		return this.equipment;
 	}
+
+
 	public void setEquipment(Item equipment) {
 		this.equipment = equipment;
+	}
+
+	
+	
+	public int attack() {
+		return super.attack()+this.equipment.getAdditionalDamage();
+  //親クラス(super)のアタックを(itemの変数名)equipmentの
+  //(Itemクラスの)getAdditionalDamageを加えてオーバーライド。
+  //equipmentはこのクラス内で宣言されてるからthisが付く
+		
 	}
 
 

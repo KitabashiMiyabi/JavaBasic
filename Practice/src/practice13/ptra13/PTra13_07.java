@@ -21,7 +21,10 @@ public class PTra13_07 {
 		// ★ SuperHeroインスタンスとSlimeインスタンスを作成し、それぞれの名前に"勇者（装備あり）", "スライム"を設定してください
 
 		SuperHero superHero = new SuperHero();
-		superHero.setName("スーパーヒーロー");
+		Slime slime = new Slime();
+		superHero.setName("勇者（装備あり）");
+		slime.setName("スライム");
+
 
 
 		// ★ Itemクラスのインスタンスを作成し、("こんぼう", 4）をコンストラクタの引数にしてください
@@ -40,9 +43,7 @@ public class PTra13_07 {
 
 		// ★ 勝利した方の出力を行ってください。「○○は■■との戦闘に勝利した」
 
-		Slime slime = new Slime();
-		slime.setName("スライム");
-
+		
 		int suattack = superHero.attack();
 		int slattack = slime.attack();
 
