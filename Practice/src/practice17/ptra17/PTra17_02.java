@@ -6,31 +6,33 @@
  */
 package practice17.ptra17;
 
+import java.io.IOException;
+
 import practice17.common.ThrowExceptionUtil;
 
 public class PTra17_02 {
 	public static void main(String[] args) {
+		
 		try {
-			dispInput();
+			dispInput();//カーソル合わせると例外の種類が出てくる
 		} catch(Exception e) {
 			System.out.println("例外が発生しました");
 		}
 	}
 
-	public static void dispInput() {
-
+	public static void dispInput() throws IOException {
+    //throwsはここでは処理しないからここ以外で例外処理してねってこと
+    //dispInput() throws でdispInput()を呼び出したところが処理してねってこと
+		
 		System.out.println("文字を入力してください");
 
 		/*
 		 * 以下の処理はコンパイルエラーになります。
-		 * ★ 適切な修正を行い、コンパイルエラーをなくしてください
+		 * 適切な修正を行い、コンパイルエラーをなくしてください
 		 */
-		try {
 		String line = ThrowExceptionUtil.inputValue();
 
 		System.out.println(line);
-		}catch(Exception  e) {
-			System.out.println("例外が発生しました");
-		}
+
 	}
 }

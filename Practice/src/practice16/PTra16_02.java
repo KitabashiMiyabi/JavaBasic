@@ -28,7 +28,14 @@ public class PTra16_02 {
 		Float f2 = f;
 		Double d2 = d;
 
-
+		System.out.println(b2);
+        System.out.println(by2);
+        System.out.println(s2);
+        System.out.println(c2);
+        System.out.println(i2);
+        System.out.println(l2);
+        System.out.println(f2);
+        System.out.println(d2);
 
 	}
 }

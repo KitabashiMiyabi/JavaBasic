@@ -13,27 +13,29 @@ public class PTra15_02 {
 	public static void main(String[] args) {
 
 
-		// roomに格納されたJava2MonthインスタンスのgetCurriculumメソッドを呼び出してください
-
-
-
 		Room room = new Java2Month();
-		//roomにgetCurriculumはない
-		//Java2MonthのgetCurriculumを呼ぶ
+		
+		//★ roomに格納されたJava2MonthインスタンスのgetCurriculumメソッドを呼び出してください
 
-
+		//roomにgetCurriculumはないから
+		//roomを継承したJava2MonthのgetCurriculumを呼びたい
+        //多態性は親クラスにあるメソッドしか呼び出せない
+		
 		Java2Month j2m = (Java2Month)room;
-		//このままだとj2mにroom代入できないからキャストする。→(Java2Month)
-		//関係ないやつはダメ
+		//このままじゃ呼べないから親クラスを子クラスに入れたい
+		//普通じゃ入れられないからキャストする
+		//親子関係だからおｋ。関係ないやつはダメ
 
-		String[] list = j2m.getCurriculum();
-        //戻り値ありのメソッド呼び → String[] list =
-
+		
 
 
 		// 取得したカリキュラム情報を全て出力してください
 
-		//全て、一つずつ出力 → for文
+		
+		String[] list = j2m.getCurriculum();
+        //戻り値ありのメソッド呼び → String[] list =
+		
+		//一つずつ出力 → for文
 		for( int i= 0 ; i<list.length; i++) {
 			System.out.println(list[i]);
 		}

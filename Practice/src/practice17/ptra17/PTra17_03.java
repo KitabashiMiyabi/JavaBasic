@@ -35,30 +35,29 @@ public class PTra17_03 {
 		 * から再度入力を求めるような形に仕様変更してください。
 		 *
 		 */
-			for (int i = 0; i < question.length; i++) {   //ここは繰り返さなくていいから
-				System.out.println("問題：" + (i + 1));   //whileに入れない
-				System.out.println(question[i]);
-				
-				while(true) {            //繰り返したい部分は入力プログラム
-					System.out.println("回答を数字で入力してください");
-					try {
-						String input = ThrowExceptionUtil.inputValue();//入力メソッド
-					
-						int num = Integer.parseInt(input); //intに変換メソッド
-		
-						if (answer[i] == num) {
-							score++;
-						}
-						break; //trueの時はここで終了
-						
+		for (int i = 0; i < question.length; i++) {   //ここは繰り返さなくていいから
+			System.out.println("問題：" + (i + 1));   //whileに入れない
+			System.out.println(question[i]);
+
+			while(true) {            //繰り返したい部分は入力プログラム
+				System.out.println("回答を数字で入力してください");
+				try {
+					String input = ThrowExceptionUtil.inputValue();//入力メソッド
+					int num = Integer.parseInt(input); //intに変換メソッド
+					if (answer[i] == num) {
+						score++;
+					}
+					break; //trueの時はここで終了
+
 					} catch(NumberFormatException e) {  //例外の時だけtry catch文で以下が実行される
 						System.out.println("数字以外が入力されました");//ここはまだwhile文の中だから
 					} catch(IOException e) {                           //入力プログラムに戻る
 						System.out.println("例外が発生しました");
 					}
+
 				}
 			}
-		
+
 
 		System.out.println("全ての問題が終わりました。");
 		System.out.println("あなたの得点は・・・" + score + "点です！");
@@ -69,14 +68,14 @@ public class PTra17_03 {
 //				while(true) {
 //					System.out.println("回答を数字で入力してください");
 //					String input = ThrowExceptionUtil.inputValue();
-//	
+//
 //					try {
 //						int num = Integer.parseInt(input);
-//		
+//
 //						if (answer[i] == num) {
 //							score++;
 //						}
-//						
+//
 //						break;
 //					} catch(NumberFormatException e) {
 //						System.out.println("数字以外が入力されました");
@@ -90,9 +89,9 @@ public class PTra17_03 {
 //		System.out.println("全ての問題が終わりました。");
 //		System.out.println("あなたの得点は・・・" + score + "点です！");
 
-		
-		
-		
+
+
+
 	}
 
 }

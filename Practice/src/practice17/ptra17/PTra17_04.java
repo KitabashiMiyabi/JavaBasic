@@ -11,23 +11,21 @@ public class PTra17_04 {
 
 		String str = "スッキリわかるJava入門";
 
-		char date [] = str.toCharArray();
-
-		for (int i = 0; i <date.length; i++) {
-				System.out.print(date[i]);
-				try {
-					Thread.sleep(500);
-
-				} catch (InterruptedException e) {
-					System.out.println(date[i]);
-				}
-
-		}
-
 		/*
 		 * ★ strに入っている文字列を1文字ずつゆっくり表示させるプログラムを完成させてください
 		 * ※ Thread.sleep を使用すること
 		 */
 
+		char[] date  = str.toCharArray();
+		for (char i :date) {
+			System.out.print(i);
+			try {
+				Thread.sleep(500);
+
+			}catch (InterruptedException e) {
+				System.out.println(i);
+			}
+
+		}
 	}
 }
